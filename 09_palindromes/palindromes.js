@@ -8,8 +8,6 @@ const palindromes = function (initString) {
     } else {
         result = false;
     }
-    console.log(current);
-    console.log(modified);
     return result;
 };
 
