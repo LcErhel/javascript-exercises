@@ -1,6 +1,10 @@
 const repeatString = function(inputString, mult) {
     let result = "";
-    console.log(result);
+    
+    if(mult < 0) {
+        return "ERROR";
+    }
+
     for(let i = 0; i < mult; i++) {
         result += inputString;
     }
