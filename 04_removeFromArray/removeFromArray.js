@@ -1,14 +1,19 @@
-const removeFromArray = function(array, removedValue) {
-    let result = array;
+const removeFromArray = function(arr, ...values) {
+    values.sort();
 
-    for(let i = 0; i < array.length; i++) {
-        if(result[i] == removedValue) {
-            result.splice(i, 1);
+    outer:
+    for(let i = 0; i < arr.length; i++) {
+        inner:
+        for(y = 0; y < values.length; y++) {
+            if(arr[i] == values[y]) {
+                arr.splice(i, 1);
+                i--;
+            }
         }
     }
 
-    console.log(result);
-    return result;
+    //result.splice(i, 1);
+    return arr;
 };
 
 // Do not edit below this line
