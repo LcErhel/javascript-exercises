@@ -5,14 +5,12 @@ const removeFromArray = function(arr, ...values) {
     for(let i = 0; i < arr.length; i++) {
         inner:
         for(y = 0; y < values.length; y++) {
-            if(arr[i] == values[y]) {
+            if(arr[i] === values[y]) {
                 arr.splice(i, 1);
                 i--;
             }
         }
     }
-
-    //result.splice(i, 1);
     return arr;
 };
 
